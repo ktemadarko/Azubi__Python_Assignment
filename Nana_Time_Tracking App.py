@@ -65,7 +65,7 @@ while not done:
                 #tasks_info["Task "+task_title]['I (Money_h_per Dollars)']=money_hours
                                   
                 #print(f'\nGreat job, you worked for {working_hours} secss {diff} secs \nand have earned $ {money_earned} or {smoney}')
-                print(f'\nGreat job, you worked for  {diff} secs or {hours} hours \nand have earned $  {smoney}\n')
+                print(f'\nGreat job, you worked for  {diff:4f} secs or {hours:4f} hours \nand have earned $  {smoney:2f}\n')
                 check=True
         
 
