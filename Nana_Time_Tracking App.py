@@ -77,7 +77,7 @@ while not done:
         print(Timesheet)
         Timesheet.to_excel("Azubi_Python_output"+str(len(Timesheet))+".xlsx", engine="xlsxwriter")
         print("\nThat is it, check on your computer for a document called \nAzubi_Python_output"+str(len(Timesheet))+".xlsx" 
-              "\nfor your Timetable in a Microsoft Excel file.")
+              "\nfor your Timesheet in a Microsoft Excel file.")
        
         done=True
 
