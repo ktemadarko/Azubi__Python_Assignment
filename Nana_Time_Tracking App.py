@@ -4,14 +4,16 @@ import datetime as dt
 import time
 import pandas as pd
 
-
+#done is a variable used to intialize the while loop
 done= False
 tasks_info={}
 
 
 print("Hello, Welcome to Nana Timesheet Tracking App"
       "\nThis app allows you to track multiple tasks. \nTo Start,\n")
-      
+
+#while done== False the app will keep asking for input from the code in line 18.
+#if the user enters done, the code jumps to the else statement in line 73 to exit the app
 while not done:
     #Get task_title
     task_title= input("Enter the name of the task to record the start time or \nType done to exit the app: \n")
