@@ -10,11 +10,12 @@ tasks_info={}
 
 
 print("Hello, Welcome to Nana Timesheet Tracking App"
-      "\nThis app allows you to track multiple tasks. \nTo Start,")
+      "\nThis app allows you to track multiple tasks. \nTo Start,\n")
       
 while not done:
     #Get task_title
-    task_title= input("Enter the name of the task to record the start time or \nType done to exit: \n")
+    task_title= input("Enter the name of the task to record the start time or \nType done to exit the app: \n")
+    print(f'Okay, the timer is running for {task_title}')
 
     if task_title.lower()!="done":
         tasks_info["Task "+task_title]={}
@@ -33,7 +34,7 @@ while not done:
         check=False
         
         while not check:
-            stop=input("Type stop to record the type you ended the task: ")
+            stop=input("Type stop to halt the timer and record the time you ended:"+ task_title "+ :")
             if stop.lower()=="stop":
                 end=str(dt.datetime.now())
                 e=time.perf_counter()
@@ -79,6 +80,7 @@ while not done:
               "\nfor your Timetable in a Microsoft Excel file.")
        
         done=True
+
 
 
 
