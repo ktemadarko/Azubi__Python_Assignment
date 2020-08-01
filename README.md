@@ -4,4 +4,4 @@ Nana's Time tracking app
 Group Members:
 Anita Tay
 Ama Owusu-Darko
-Augustine Baah
+Augustine Boateng Baah
