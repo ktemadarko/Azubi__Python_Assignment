@@ -12,6 +12,31 @@ import pandas as pd
 done= False
 tasks_info={}
 
+#This captures the start date and time automatically from the user's system and asks user to manually input end date and time
+client_name = input('Enter client name: ')
+task_title = input('Enter task name: ')
+
+import datetime
+
+start2 = ' '
+if start2.lower()== 'start':
+    start_date = datetime.datetime.now()
+else:
+    start2 = input('Please enter "start" to capture the start date and time from the system: ')
+end_date = input('Enter task end date and time; yy-mm-dd hh-mm-ss: ')
+format = '%Y-%m-%d %H:%M:%S'
+begin_time = datetime.datetime.now()
+end_time = datetime.datetime.strptime(end_date, format)
+working_time = (end_time - begin_time)
+working_hours = round(float(working_time.total_seconds()/60**2), 2)
+money_per_hour = 5
+money_earned = round(money_per_hour * working_hours,2)
+
+print('Great job, you worked for ' + str(working_hours) + ' hours and have earned $' + str(money_earned) )
+
+
+
+
 
 print("Hello, Welcome to Nana's Timesheet"
       "\nTo start type the task number eg. Task 1 for Task 1 or type done to exit."
@@ -63,7 +88,7 @@ while not done:
        
         done=True
             
-            
+                      
             
 #we could get the date and times with the following lines of code
 client_name = input('Enter client name: ')
@@ -82,3 +107,4 @@ money_per_hour = 5
 money_earned = round(money_per_hour * working_hours,2)
 
 print('Great job, you worked for ' + str(working_hours) + ' hours and have earned $' + str(money_earned) )
+
