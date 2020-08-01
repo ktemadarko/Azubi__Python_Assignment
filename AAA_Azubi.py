@@ -71,7 +71,7 @@ while not done:
         
         tasks_info["Task "+task_number]['Duration of Work (Hours)']=difference
         tasks_info["Task "+task_number]['Money_earned (Dollars)']=round(float(5*difference))
-        
+       
 
     else: #end loop if done
         #del tasks_info["Taskdone"]
@@ -88,3 +88,23 @@ while not done:
        
         done=True
             
+                      
+            
+#we could get the date and times with the following lines of code
+client_name = input('Enter client name: ')
+task_title = input('Enter task name: ')
+
+import datetime
+
+start_date = input('Enter task start date and time; yy-mm-dd hh:mm:ss: ')
+end_date = input('Enter task end date and time; yy-mm-dd hh-mm-ss: ')
+format = '%Y-%m-%d %H:%M:%S'
+begin_time = datetime.datetime.strptime(start_date, format)
+end_time = datetime.datetime.strptime(end_date, format)
+working_time = (end_time - begin_time)
+working_hours = round(float(working_time.total_seconds()/60**2), 2)
+money_per_hour = 5
+money_earned = round(money_per_hour * working_hours,2)
+
+print('Great job, you worked for ' + str(working_hours) + ' hours and have earned $' + str(money_earned) )
+
