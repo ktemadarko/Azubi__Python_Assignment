@@ -30,13 +30,12 @@ while not done:
         #tasks_info["Task "+task_title]['C (Start_time)']=start_dt
         tasks_info["Task "+task_title]['A (Start_timer)']=s
 
-        #Get Stop_time 
-        
+        #Get Stop_time
         #validating that the user entered the key word stop to record the stop time
         check=False
         
         while not check:
-            stop=input("Type stop to halt the timer and record the time you ended:"+ task_title "+ :")
+            stop=input("Type stop to halt the timer and record the time you ended:"+ task_title + " :")
             if stop.lower()=="stop":
                 end=str(dt.datetime.now())
                 e=time.perf_counter()
