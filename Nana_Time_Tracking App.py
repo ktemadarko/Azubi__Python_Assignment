@@ -77,7 +77,7 @@ while not done:
         print("\nSince Nana earns 5 dollars an hour. Here is his Timesheet.\n")
         print(Timesheet)
         Timesheet.to_excel("Azubi_Python_output"+str(len(Timesheet))+".xlsx", engine="xlsxwriter")
-        print("\nThat is it, check on your computer for a document called \nAzubi_Python_output"+str(len(Timesheet))+".xlsx" 
+        print("\nThat is it, check on your computer for a document called \nTime_Tracker_Python_output"+str(len(Timesheet))+".xlsx" 
               "\nfor your Timesheet in a Microsoft Excel file.")
        
         done=True
